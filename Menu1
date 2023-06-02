@@ -1,0 +1,48 @@
+package com.mycompany.menu1;
+
+import java.util.Scanner;
+
+
+public class Menu1 {
+int selection;
+String LugarEstacion;
+private final Scanner input = new Scanner(System.in);
+   
+public static void main() {
+System.out.println("Bienvenido al Sistema de Transporte");
+System.out.println("1. Consultar paradas de una ruta de bus");
+System.out.println("2. Consultar rutas de buses en días feriados");
+System.out.println("0. Salir");
+        
+int selection = input.nextInt();
+input.nextLine();
+ 
+switch (selection) {
+case 1 -> System.out.print("Ingrese el número de ruta del bus: ");
+case 2 -> displayHolidayRoutes();
+default -> System.out.println("Invalid selection.");
+ }
+ } 
+   private static void displayBusStops(String busNumber) {
+    System.out.println ("Por favor introduzca su Ruta:"); 
+        String ruta = "";
+        Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+        ruta = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+        System.out.println ("El numero de identidad que usted ha ingresado es: \"" + ruta +"\""); 
+        
+        Buses consultarEstacion = new Buses();
+        LugarEstacion = consultarEstacion.sitiodeRuta(ruta);
+        
+        System.out.println("su lugar de votacion es: " + LugarEstacion);    
+    }         
+           
+   private static void displayHolidayRoutes() {
+       System.out.println("Rutas de buses en días feriados:");
+        for (Bus bus : buses) {
+            if (holidayRoutes.contains(bus.getBusNumber())) {
+                System.out.println(bus.getBusNumber());
+    }        
+       
+    }
+}
+   }
