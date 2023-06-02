@@ -1,0 +1,27 @@
+package com.mycompany.menu1;
+
+
+public class Buses {
+    String consultarEstacion;
+   
+String sitiodeRuta( String ruta)
+    {
+       
+if (ruta.startsWith("1"))
+               
+ {
+consultarEstacion= "G43";
+                   }
+else{
+consultarEstacion= "A12";
+        } 
+ if{
+holidayRoutes("G43");
+}
+
+        return consultarEstacion;
+    }
+
+ 
+   
+}
