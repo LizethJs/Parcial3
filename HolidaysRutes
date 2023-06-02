@@ -1,0 +1,10 @@
+class holidayRoutes {
+    
+    
+       System.out.println ("Por favor introduzca la ruta que desea realizar");
+     
+         Menu1 Menu1 = new Menu1();
+ 
+         Menu1.main()
+    
+}
